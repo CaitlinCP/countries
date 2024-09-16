@@ -1,0 +1,251 @@
+Country,Capital,Continent,Correct
+South Georgia,King Edward Point,Antarctica,None
+Grenada,St. George's,North America,None
+Switzerland,Bern,Europe,None
+Sierra Leone,Freetown,Africa,None
+Hungary,Budapest,Europe,Yes
+Taiwan,Taipei,Asia,None
+Wallis and Futuna,Mata-Utu,Oceania,None
+Barbados,Bridgetown,North America,None
+Pitcairn Islands,Adamstown,Oceania,None
+Ivory Coast,Yamoussoukro,Africa,None
+Tunisia,Tunis,Africa,None
+Italy,Rome,Europe,Yes
+Benin,Porto-Novo,Africa,None
+Indonesia,Jakarta,Asia,None
+Cape Verde,Praia,Africa,None
+Saint Kitts and Nevis,Basseterre,North America,None
+Laos,Vientiane,Asia,None
+Caribbean Netherlands,Kralendijk,North America,None
+Uganda,Kampala,Africa,None
+Andorra,Andorra la Vella,Europe,None
+Burundi,Gitega,Africa,None
+South Africa,Pretoria,Africa,None
+France,Paris,Europe,None
+Libya,Tripoli,Africa,None
+Mexico,Mexico City,North America,None
+Gabon,Libreville,Africa,None
+Northern Mariana Islands,Saipan,Oceania,None
+North Macedonia,Skopje,Europe,None
+China,Beijing,Asia,None
+Yemen,Sana'a,Asia,None
+Saint Barthélemy,Gustavia,North America,None
+Guernsey,St. Peter Port,Europe,No
+Solomon Islands,Honiara,Oceania,None
+Svalbard and Jan Mayen,Longyearbyen,Europe,None
+Faroe Islands,Tórshavn,Europe,None
+Uzbekistan,Tashkent,Asia,None
+Egypt,Cairo,Africa,None
+Senegal,Dakar,Africa,None
+Sri Lanka,Sri Jayawardenepura Kotte,Asia,None
+Palestine,Ramallah,Asia,None
+Bangladesh,Dhaka,Asia,None
+Peru,Lima,South America,None
+Singapore,Singapore,Asia,None
+Turkey,Ankara,Europe,None
+Afghanistan,Kabul,Asia,None
+Aruba,Oranjestad,North America,None
+Cook Islands,Avarua,Oceania,None
+United Kingdom,London,Europe,None
+Zambia,Lusaka,Africa,None
+Finland,Helsinki,Europe,None
+Niger,Niamey,Africa,None
+Christmas Island,Flying Fish Cove,Asia,None
+Tokelau,Fakaofo,Oceania,None
+Guinea-Bissau,Bissau,Africa,None
+Azerbaijan,Baku,Europe,None
+Réunion,Saint-Denis,Africa,None
+Djibouti,Djibouti,Africa,None
+North Korea,Pyongyang,Asia,None
+Mauritius,Port Louis,Africa,None
+Montserrat,Plymouth,North America,None
+United States Virgin Islands,Charlotte Amalie,North America,None
+Colombia,Bogotá,South America,None
+Greece,Athens,Europe,None
+Croatia,Zagreb,Europe,None
+Morocco,Rabat,Africa,None
+Algeria,Algiers,Africa,None
+Antarctica,None,Antarctica,None
+Netherlands,Amsterdam,Europe,None
+Sudan,Khartoum,Africa,None
+Fiji,Suva,Oceania,None
+Liechtenstein,Vaduz,Europe,None
+Nepal,Kathmandu,Asia,None
+Puerto Rico,San Juan,North America,None
+Georgia,Tbilisi,Asia,None
+Pakistan,Islamabad,Asia,None
+Monaco,Monaco,Europe,None
+Botswana,Gaborone,Africa,None
+Lebanon,Beirut,Asia,None
+Papua New Guinea,Port Moresby,Oceania,None
+Mayotte,Mamoudzou,Africa,None
+Dominican Republic,Santo Domingo,North America,None
+Norfolk Island,Kingston,Oceania,None
+Bouvet Island,None,Antarctica,None
+Qatar,Doha,Asia,None
+Madagascar,Antananarivo,Africa,None
+India,New Delhi,Asia,None
+Syria,Damascus,Asia,None
+Montenegro,Podgorica,Europe,None
+Eswatini,Mbabane,Africa,None
+Paraguay,Asunción,South America,None
+El Salvador,San Salvador,North America,None
+Ukraine,Kyiv,Europe,Yes
+Isle of Man,Douglas,Europe,None
+Namibia,Windhoek,Africa,None
+United Arab Emirates,Abu Dhabi,Asia,None
+Bulgaria,Sofia,Europe,None
+Greenland,Nuuk,North America,None
+Germany,Berlin,Europe,None
+Cambodia,Phnom Penh,Asia,None
+Iraq,Baghdad,Asia,None
+French Southern and Antarctic Lands,Port-aux-Français,Antarctica,None
+Sweden,Stockholm,Europe,Yes
+Cuba,Havana,North America,None
+Kyrgyzstan,Bishkek,Asia,None
+Russia,Moscow,Europe,None
+Malaysia,Kuala Lumpur,Asia,None
+São Tomé and Príncipe,São Tomé,Africa,None
+Cyprus,Nicosia,Europe,None
+Canada,Ottawa,North America,None
+Malawi,Lilongwe,Africa,None
+Saudi Arabia,Riyadh,Asia,None
+Bosnia and Herzegovina,Sarajevo,Europe,None
+Ethiopia,Addis Ababa,Africa,None
+Spain,Madrid,Europe,None
+Slovenia,Ljubljana,Europe,None
+Oman,Muscat,Asia,None
+Saint Pierre and Miquelon,Saint-Pierre,North America,None
+Macau,None,Asia,None
+San Marino,City of San Marino,Europe,None
+Lesotho,Maseru,Africa,None
+Marshall Islands,Majuro,Oceania,None
+Sint Maarten,Philipsburg,North America,None
+Iceland,Reykjavik,Europe,None
+Luxembourg,Luxembourg,Europe,Yes
+Argentina,Buenos Aires,South America,None
+Turks and Caicos Islands,Cockburn Town,North America,None
+Nauru,Yaren,Oceania,None
+Cocos (Keeling) Islands,West Island,Asia,None
+Western Sahara,El Aaiún,Africa,None
+Dominica,Roseau,North America,None
+Costa Rica,San José,North America,None
+Australia,Canberra,Oceania,None
+Thailand,Bangkok,Asia,None
+Haiti,Port-au-Prince,North America,None
+Tuvalu,Funafuti,Oceania,None
+Honduras,Tegucigalpa,North America,None
+Equatorial Guinea,Malabo,Africa,None
+Saint Lucia,Castries,North America,None
+French Polynesia,Papeetē,Oceania,None
+Belarus,Minsk,Europe,None
+Latvia,Riga,Europe,None
+Palau,Ngerulmud,Oceania,None
+Guadeloupe,Basse-Terre,North America,None
+Philippines,Manila,Asia,None
+Gibraltar,Gibraltar,Europe,Yes
+Denmark,Copenhagen,Europe,None
+Cameroon,Yaoundé,Africa,None
+Guinea,Conakry,Africa,None
+Bahrain,Manama,Asia,None
+Suriname,Paramaribo,South America,None
+DR Congo,Kinshasa,Africa,None
+Somalia,Mogadishu,Africa,None
+Czechia,Prague,Europe,None
+New Caledonia,Nouméa,Oceania,None
+Vanuatu,Port Vila,Oceania,None
+"Saint Helena, Ascension and Tristan da Cunha",Jamestown,Africa,None
+Togo,Lomé,Africa,None
+British Virgin Islands,Road Town,North America,None
+Kenya,Nairobi,Africa,None
+Niue,Alofi,Oceania,None
+Heard Island and McDonald Islands,None,Antarctica,None
+Rwanda,Kigali,Africa,None
+Estonia,Tallinn,Europe,None
+Romania,Bucharest,Europe,None
+Trinidad and Tobago,Port of Spain,North America,None
+Guyana,Georgetown,South America,None
+Timor-Leste,Dili,Oceania,None
+Vietnam,Hanoi,Asia,None
+Uruguay,Montevideo,South America,None
+Vatican City,Vatican City,Europe,None
+Hong Kong,City of Victoria,Asia,None
+Austria,Vienna,Europe,None
+Antigua and Barbuda,Saint John's,North America,None
+Turkmenistan,Ashgabat,Asia,None
+Mozambique,Maputo,Africa,None
+Panama,Panama City,North America,None
+Micronesia,Palikir,Oceania,None
+Ireland,Dublin,Europe,None
+Curaçao,Willemstad,North America,None
+French Guiana,Cayenne,South America,None
+Norway,Oslo,Europe,Yes
+Åland Islands,Mariehamn,Europe,None
+Central African Republic,Bangui,Africa,None
+Burkina Faso,Ouagadougou,Africa,None
+Eritrea,Asmara,Africa,None
+Tanzania,Dodoma,Africa,None
+South Korea,Seoul,Asia,None
+Jordan,Amman,Asia,None
+Mauritania,Nouakchott,Africa,None
+Lithuania,Vilnius,Europe,None
+United States Minor Outlying Islands,Washington DC,Oceania,None
+Slovakia,Bratislava,Europe,None
+Angola,Luanda,Africa,None
+Kazakhstan,Nur-Sultan,Asia,None
+Moldova,Chișinău,Europe,None
+Mali,Bamako,Africa,None
+Falkland Islands,Stanley,South America,None
+Armenia,Yerevan,Asia,None
+Samoa,Apia,Oceania,None
+Jersey,Saint Helier,Europe,None
+Japan,Tokyo,Asia,None
+Bolivia,Sucre,South America,None
+Chile,Santiago,South America,None
+United States,"Washington, D.C.",North America,None
+Saint Vincent and the Grenadines,Kingstown,North America,None
+Bermuda,Hamilton,North America,None
+Seychelles,Victoria,Africa,None
+British Indian Ocean Territory,Diego Garcia,Asia,None
+Guatemala,Guatemala City,North America,None
+Ecuador,Quito,South America,None
+Martinique,Fort-de-France,North America,None
+Tajikistan,Dushanbe,Asia,None
+Malta,Valletta,Europe,None
+Gambia,Banjul,Africa,None
+Nigeria,Abuja,Africa,None
+Bahamas,Nassau,North America,None
+Kosovo,Pristina,Europe,None
+Kuwait,Kuwait City,Asia,None
+Maldives,Malé,Asia,None
+South Sudan,Juba,Africa,None
+Iran,Tehran,Asia,None
+Albania,Tirana,Europe,None
+Brazil,Brasília,South America,None
+Serbia,Belgrade,Europe,None
+Belize,Belmopan,North America,None
+Myanmar,Naypyidaw,Asia,None
+Bhutan,Thimphu,Asia,None
+Venezuela,Caracas,South America,None
+Liberia,Monrovia,Africa,None
+Jamaica,Kingston,North America,None
+Poland,Warsaw,Europe,None
+Cayman Islands,George Town,North America,None
+Brunei,Bandar Seri Begawan,Asia,None
+Comoros,Moroni,Africa,None
+Guam,Hagåtña,Oceania,None
+Tonga,Nuku'alofa,Oceania,None
+Kiribati,South Tarawa,Oceania,None
+Ghana,Accra,Africa,None
+Chad,N'Djamena,Africa,None
+Zimbabwe,Harare,Africa,None
+Saint Martin,Marigot,North America,None
+Mongolia,Ulan Bator,Asia,None
+Portugal,Lisbon,Europe,None
+American Samoa,Pago Pago,Oceania,None
+Republic of the Congo,Brazzaville,Africa,None
+Belgium,Brussels,Europe,None
+Israel,Jerusalem,Asia,None
+New Zealand,Wellington,Oceania,None
+Nicaragua,Managua,North America,None
+Anguilla,The Valley,North America,None
