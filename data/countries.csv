@@ -3,14 +3,14 @@ South Georgia,King Edward Point,Antarctica,None
 Grenada,St. George's,North America,None
 Switzerland,Bern,Europe,None
 Sierra Leone,Freetown,Africa,None
-Hungary,Budapest,Europe,Yes
+Hungary,Budapest,Europe,None
 Taiwan,Taipei,Asia,None
 Wallis and Futuna,Mata-Utu,Oceania,None
 Barbados,Bridgetown,North America,None
 Pitcairn Islands,Adamstown,Oceania,None
 Ivory Coast,Yamoussoukro,Africa,None
 Tunisia,Tunis,Africa,None
-Italy,Rome,Europe,Yes
+Italy,Rome,Europe,None
 Benin,Porto-Novo,Africa,None
 Indonesia,Jakarta,Asia,None
 Cape Verde,Praia,Africa,None
@@ -30,7 +30,7 @@ North Macedonia,Skopje,Europe,None
 China,Beijing,Asia,None
 Yemen,Sana'a,Asia,None
 Saint Barthélemy,Gustavia,North America,None
-Guernsey,St. Peter Port,Europe,No
+Guernsey,St. Peter Port,Europe,None
 Solomon Islands,Honiara,Oceania,None
 Svalbard and Jan Mayen,Longyearbyen,Europe,None
 Faroe Islands,Tórshavn,Europe,None
@@ -90,7 +90,7 @@ Montenegro,Podgorica,Europe,None
 Eswatini,Mbabane,Africa,None
 Paraguay,Asunción,South America,None
 El Salvador,San Salvador,North America,None
-Ukraine,Kyiv,Europe,Yes
+Ukraine,Kyiv,Europe,None
 Isle of Man,Douglas,Europe,None
 Namibia,Windhoek,Africa,None
 United Arab Emirates,Abu Dhabi,Asia,None
@@ -100,7 +100,7 @@ Germany,Berlin,Europe,None
 Cambodia,Phnom Penh,Asia,None
 Iraq,Baghdad,Asia,None
 French Southern and Antarctic Lands,Port-aux-Français,Antarctica,None
-Sweden,Stockholm,Europe,Yes
+Sweden,Stockholm,Europe,None
 Cuba,Havana,North America,None
 Kyrgyzstan,Bishkek,Asia,None
 Russia,Moscow,Europe,None
@@ -122,7 +122,7 @@ Lesotho,Maseru,Africa,None
 Marshall Islands,Majuro,Oceania,None
 Sint Maarten,Philipsburg,North America,None
 Iceland,Reykjavik,Europe,None
-Luxembourg,Luxembourg,Europe,Yes
+Luxembourg,Luxembourg,Europe,None
 Argentina,Buenos Aires,South America,None
 Turks and Caicos Islands,Cockburn Town,North America,None
 Nauru,Yaren,Oceania,None
@@ -143,7 +143,7 @@ Latvia,Riga,Europe,None
 Palau,Ngerulmud,Oceania,None
 Guadeloupe,Basse-Terre,North America,None
 Philippines,Manila,Asia,None
-Gibraltar,Gibraltar,Europe,Yes
+Gibraltar,Gibraltar,Europe,None
 Denmark,Copenhagen,Europe,None
 Cameroon,Yaoundé,Africa,None
 Guinea,Conakry,Africa,None
@@ -179,7 +179,7 @@ Micronesia,Palikir,Oceania,None
 Ireland,Dublin,Europe,None
 Curaçao,Willemstad,North America,None
 French Guiana,Cayenne,South America,None
-Norway,Oslo,Europe,Yes
+Norway,Oslo,Europe,None
 Åland Islands,Mariehamn,Europe,None
 Central African Republic,Bangui,Africa,None
 Burkina Faso,Ouagadougou,Africa,None

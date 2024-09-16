@@ -83,7 +83,36 @@ pub mod fetch_countries {
         }
 
         (country_names, country_capitals, country_continents, country_correct)
-     
+
+    }
+
+    pub fn create_country_dataframe(country_names: Vec<String>, country_capitals: Vec<String>, country_continents: Vec<String>, country_correct: Vec<String>) -> DataFrame {
+        df! {
+            "Country" => country_names,
+            "Capital" => country_capitals,
+            "Continent" => country_continents,
+            "Correct" => country_correct
+        }.unwrap()
+    }
+
+    pub fn filter_country_dataframe(countries_df: DataFrame, continent: &str) -> DataFrame {
+        if continent == "All" {
+            countries_df
+        } else {
+            countries_df
+                .lazy()
+                .filter(col("Continent").eq(lit(continent)))
+                .collect()
+                .unwrap()
+        }
+    }
+
+    pub fn country_df_to_json(countries_df: DataFrame) -> Result<String, serde_json::Error> {
+        
+        let countries_json = serde_json::to_string(&countries_df).unwrap();
+
+        Ok(countries_json)
+
     }
     
     pub fn save_country_data (country_names: Vec<String>, country_capitals: Vec<String>, country_continents: Vec<String>, country_correct: Vec<String>) {
