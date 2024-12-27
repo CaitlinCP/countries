@@ -5,15 +5,32 @@ let numCorrect = 0;
 let maxCountries = 5;
 let previousResult = '';
 
+/* Country object */
 const Country = class {
     constructor(Name, Capital) {
         this.Name = Name;
         this.Capital = Capital;
     }
-};
+}
 
-async function fetchFlashCards() {
-    
+/* Utility functions to handle data, hide elements */
+function extractCountry(data, index) {
+    const countryName = data[0].values[index];
+    const countryCapital = data[1].values[index];
+
+    return new Country(countryName, countryCapital);
+}
+
+function hideElement(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+function showElement(id) {
+    document.getElementById(id).style.display = '';
+}
+
+/* Fetch country data from the Rust API */
+async function fetchFlashCards() {    
     continent = document.getElementById("continentSelect").value
     maxCountries = document.getElementById("numberOfCards").value
 
@@ -37,32 +54,13 @@ async function fetchFlashCards() {
         console.error("Error fetching flashcards:", error);
     }
 
-};
-
-function hideElement(id) {
-    document.getElementById(id).style.display = 'none';
 }
 
-function showElement(id) {
-    document.getElementById(id).style.display = '';
-}
-
-function toggleAnswer(answer) {
-    const answerDiv = document.getElementById("answer");
-    if (answerToggle == 0) {
-        answerDiv.innerHTML = `<h3>${answer}</h3>`;
-        answerToggle = 1;
-
-        const showButton = document.getElementById("show-answer");
-        showButton.innerHTML = `Hide Answer`
-    }
-
-    else {
-        answerDiv.innerHTML = `<h3></h3>`;
-        answerToggle = 0;
-    }
-};
-
+/**
+ * Checks the user's input and compares it against the country data presented.
+ * @param {*} country 
+ * @returns none
+ */
 function checkAnswer(country) {
     const inputElement = document.getElementById("user-guess");
     const userGuess = inputElement.value;
@@ -74,8 +72,8 @@ function checkAnswer(country) {
         return;
     }
 
-    normalizedAnswer = country.Capital.normalize('NFD').toLowerCase().trim();
-    normalizedGuess = userGuess.normalize('NFD').toLowerCase().trim();
+    normalizedAnswer = country.Capital.normalize('NFD').toLowerCase().replace(/'/g, "").trim();
+    normalizedGuess = userGuess.normalize('NFD').toLowerCase().replace(/'/g, "").trim();
 
     console.log("Normalized Answer:", normalizedAnswer);
     console.log("Normalized Guess:", normalizedGuess);
@@ -93,6 +91,10 @@ function checkAnswer(country) {
     displayNextFlashCard();
 }
 
+/**
+ * Displays the next flash card in the quiz
+ * @returns none
+ */
 function displayNextFlashCard() {
     if (document.getElementById("flashcards").style.display = 'none') {
         showElement("flashcards")
@@ -116,37 +118,16 @@ function displayNextFlashCard() {
        <input type="text" id="user-guess">
         <button type="button" class="btn btn-primary" id="make-guess">Check Answer</button>
     </div>`;
-
-    document.getElementById("make-guess").addEventListener('click', () => checkAnswer(card))
-    // document.getElementById("show-answer").addEventListener('click', () => toggleAnswer(card.Capital))
+    document.getElementById("user-guess").focus();
+    document.getElementById("make-guess").addEventListener('click', () => checkAnswer(card));
+    document.getElementById("user-guess").addEventListener("keydown", (event) => {
+        if (event.key == "Enter") {
+            checkAnswer(card);
+        }
+    });
 
     currentCardIndex++;
-};
-
-function displayPreviousFlashCard() {
-    const flashCardsDiv = document.getElementById("flashcards");
-
-    if (currentCardIndex <= 0) {
-        console.log("No more previous cards to show.");
-        flashCardsDiv.innerHTML = "No previous flash cards to show.";
-        return;
-    }
-
-    currentCardIndex--;
-
-    const card = extractCountry(flashCardsData, currentCardIndex);
-    flashCardsDiv.innerHTML = `<div class="flashcard">
-        <h2>${card.Name}</h2>
-        <h3 id="answer"></h3>
-    </div>`;
-};
-
-function extractCountry(data, index) {
-    const countryName = data[0].values[index];
-    const countryCapital = data[1].values[index];
-
-    return new Country(countryName, countryCapital);
-};
+}
 
 console.log("Script is running.")
 document.addEventListener('DOMContentLoaded', function() {
