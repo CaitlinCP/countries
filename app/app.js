@@ -80,13 +80,13 @@ function checkAnswer(country) {
 
     if (userGuess === "") {
         resultDiv.className = 'alert alert-warning';
-        resultDiv.innerHTML = `<p>Please enter a guess.</p>`;
+        resultDiv.textContent = 'Please enter a guess.';
         return;
     }
 
     country.userGuess = userGuess;
-    normalizedAnswer = country.Capital.normalize('NFD').toLowerCase().replace(/'/g, "").trim();
-    normalizedGuess = userGuess.normalize('NFD').toLowerCase().replace(/'/g, "").trim();
+    normalizedAnswer = country.Capital.normalize('NFD').toLowerCase().replace(/'|\.|[\u0300-\u036f]/g, "").trim();
+    normalizedGuess = userGuess.normalize('NFD').toLowerCase().replace(/'|\.|[\u0300-\u036f]/g, "").trim();
 
     console.log("Normalized Answer:", normalizedAnswer);
     console.log("Normalized Guess:", normalizedGuess);
@@ -114,6 +114,7 @@ function checkAnswer(country) {
  */
 function displayNextFlashCard() {
     const flashCardsDiv = document.getElementById("flashcards");
+    flashCardsDiv.innerHTML = ''
 
     // Ensure that the flashcards div is visible
     if (flashCardsDiv.style.display === 'none') {
@@ -124,25 +125,42 @@ function displayNextFlashCard() {
         
 
         const completionMessage = document.createElement('div');
-        completionMessage.innerHTML = `${previousResult}
-        Quiz complete. You guessed ${numCorrect}/${maxCountries} correctly.
+        completionMessage.innerHTML = `Quiz complete. You guessed ${numCorrect}/${maxCountries} correctly.
         <button class="btn btn-primary btn-lg" onclick="location.reload()">Try Again</button>`;
 
         flashCardsDiv.appendChild(completionMessage);
         displayReportCard();
         
-        console.log("Quiz complete. Results displayed.", answers);
+        console.log("Quiz complete. Incorrect Answers:", incorrect);
         return;
     }
 
     const card = extractCountry(flashCardsData, currentCardIndex);
-    flashCardsDiv.innerHTML = `<div class="flashcard">
-        ${previousResult}
-        <div id="guess-result"></div>
-        <h2>${card.Name}</h2>
-       <input type="text" id="user-guess">
-        <button type="button" class="btn btn-primary btn-lg" id="make-guess">Check Answer</button>
-    </div>`;
+
+    const flashCard = document.createElement('div');
+    flashCard.className = 'flashcard';
+    flashCardsDiv.appendChild(flashCard);
+
+    const guessResultDiv = document.createElement('div');
+    guessResultDiv.id = 'guess-result';
+    guessResultDiv.innerHTML = previousResult;
+    flashCard.appendChild(guessResultDiv);
+
+    const cardNameHeader = document.createElement('h2');
+    cardNameHeader.textContent = `${card.Name}`;
+    flashCard.appendChild(cardNameHeader);
+
+    const guessInput = document.createElement('input');
+    guessInput.type = 'text';
+    guessInput.id = 'user-guess';
+    flashCard.appendChild(guessInput);
+
+    const checkAnswerButton = document.createElement('button');
+    checkAnswerButton.className = 'btn btn-primary btn-lg';
+    checkAnswerButton.id = 'make-guess';
+    checkAnswerButton.textContent = 'Guess'
+    flashCard.appendChild(checkAnswerButton);
+
     document.getElementById("user-guess").focus();
     document.getElementById("make-guess").addEventListener('click', () => checkAnswer(card));
     document.getElementById("user-guess").addEventListener("keydown", (event) => {
@@ -159,6 +177,7 @@ function displayReportCard() {
 
     const reportCardDiv = document.createElement('div');
     reportCardDiv.id = 'report-card-div';
+    reportCardDiv.className = 'd-flex flex-column align-items-center justify-content-center w-100';
     flashCardsDiv.appendChild(reportCardDiv);
 
     const resultsTitle = document.createElement('h2');
@@ -167,6 +186,9 @@ function displayReportCard() {
 
     const reportCard = document.createElement('table');
     reportCard.id = 'report-card';
+    reportCard.className = 'table';
+    reportCard.style.width = 'auto';
+    reportCard.style.margin = '0 auto';
     reportCardDiv.appendChild(reportCard);
 
     const reportCardHead = document.createElement('thead');

@@ -1,4 +1,4 @@
-use actix_web::{get, post, web::{self, JsonBody}, App, HttpResponse, HttpServer, Responder};
+use actix_web::{get, web::{self}, App, HttpServer, Responder};
 use actix_cors::Cors;
 use serde::Deserialize;
 use countries::fetch_countries;
