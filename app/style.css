@@ -1,0 +1,21 @@
+body {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.container {
+    max-width: 95%;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 24px;
+    }
+    .container {
+        max-width: 85%;
+    }
+}
