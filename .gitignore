@@ -1,2 +1,6 @@
 /target
 /data/*_old*.csv
+/data/*incorrect*
+app/.parcel-cache
+app/dist
+app/node_modules

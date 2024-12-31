@@ -1,11 +1,12 @@
+import axios from 'axios';
+
 let flashCardsData = [];
 let currentCardIndex = 0;
-let answerToggle = 0;
 let numCorrect = 0;
 let maxCountries = 5;
 let previousResult = ''
 let answers = []
-let incorrect = {"columns": [{"name":"Country","datatype":"String","bit_settings":"","values":[]},{"name":"Capital","datatype":"String","bit_settings":"","values":[]}]};
+let incorrect = {"columns": [{"name":"Country","datatype":"String","bit_settings":"","values":[]},{"name":"Capital","datatype":"String","bit_settings":"","values":[]},{"name":"Correct","datatype":"String","bit_settings":"","values":[]}]};
 
 /* Country object */
 const Country = class {
@@ -28,6 +29,7 @@ function extractCountry(data, index) {
 function updateIncorrect(country) {
     incorrect['columns'][0].values.push(country.Name);
     incorrect['columns'][1].values.push(country.Capital);
+    incorrect['columns'][2].values.push('false');
 }
 
 function hideElement(id) {
@@ -36,6 +38,24 @@ function hideElement(id) {
 
 function showElement(id) {
     document.getElementById(id).style.display = '';
+}
+
+async function sendIncorrect(incorrect) {
+
+    const url = 'http://127.0.0.1:8080/incorrect';
+
+    try {
+        const response = await axios.post(url, incorrect, {
+            headers: {
+                'Content-Type': 'application/json'
+            }});
+        console.log('Status code: ', response.status);
+        console.log('Body: ', response.data);
+
+    } catch (error) {
+        console.error('Error: ', error.response ? error.response.data : error.message);
+    }
+        
 }
 
 /**
@@ -130,6 +150,14 @@ function displayNextFlashCard() {
 
         flashCardsDiv.appendChild(completionMessage);
         displayReportCard();
+
+        const saveIncorrect = document.createElement('button');
+        saveIncorrect.className = 'btn btn-primary btn-lg';
+        saveIncorrect.id = 'save-incorrect';
+        saveIncorrect.textContent = 'Save Incorrect Answers'
+        flashCardsDiv.appendChild(saveIncorrect);
+        saveIncorrect.addEventListener('click', () => sendIncorrect(incorrect))
+
         
         console.log("Quiz complete. Incorrect Answers:", incorrect);
         return;
@@ -233,6 +261,12 @@ function displayReportCard() {
 console.log("Script is running.");
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Document loaded, fetching cards.");
+    const startQuizButton = document.getElementById('start-quiz');
+
+    if (startQuizButton) {
+        startQuizButton.addEventListener('click', fetchFlashCards);
+    }
+
     hideElement("flashcards");
 });
 
