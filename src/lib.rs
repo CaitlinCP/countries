@@ -1,3 +1,6 @@
+pub mod models;
+
+
 pub mod fetch_countries {
     use polars::prelude::*;
 
@@ -30,4 +33,27 @@ pub fn sample_country_dataframe(countries_df: DataFrame, max_countries: usize) -
     }
 }
 
+}
+
+pub mod save_countries {
+    use polars::prelude::*;
+    use super::models::IncorrectData;
+    use std::fs;
+    use std::path::Path;
+    
+    pub fn incorrect_country_json_to_csv(incorrect_data: IncorrectData, filepath: &str) -> PolarsResult<()> {
+        let country_series = Series::new("Country", &incorrect_data.columns[0].values);
+        let capital_series = Series::new("Capital", &incorrect_data.columns[1].values);
+    
+        let mut df = DataFrame::new(vec![country_series, capital_series])?;
+        
+        if let Some(parent) = Path::new(filepath).parent() {
+            fs::create_dir_all(parent)?;
+        }
+        
+        let mut file = std::fs::File::create(filepath)?;
+        CsvWriter::new(&mut file).finish(&mut df)?;
+    
+        Ok(())
+    }
 }
